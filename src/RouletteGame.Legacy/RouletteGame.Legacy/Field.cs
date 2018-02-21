@@ -39,7 +39,7 @@ namespace RouletteGame.Legacy
             }
         }
 
-        public bool Even => Number%2 == 0;
+        public bool Even => Number % 2 == 0;
 
         public override string ToString()
         {
