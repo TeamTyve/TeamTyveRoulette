@@ -45,7 +45,9 @@
     <Compile Include="Field.cs" />
     <Compile Include="FieldGenerator.cs" />
     <Compile Include="IFieldGenerator.cs" />
+    <Compile Include="IRandomizer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Randomizer.cs" />
     <Compile Include="Roulette.cs" />
     <Compile Include="RouletteGame.cs" />
     <Compile Include="RouletteGameTestApplication.cs" />

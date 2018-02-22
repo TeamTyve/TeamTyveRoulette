@@ -7,18 +7,23 @@ namespace RouletteGame.Legacy
     {
         private readonly List<Field> _fields;
         private IFieldGenerator _fieldGenerator;
+        private IRandomizer _randomizer;
         private Field _result;
 
-        public Roulette(IFieldGenerator fieldGenerator)
+        public uint Lowerbound { get; set; } = 0;
+        public uint Higherbound { get; set; } = 37;
+
+        public Roulette(IFieldGenerator fieldGenerator, IRandomizer randomizer)
         {
             _fieldGenerator = fieldGenerator;
+            _randomizer = randomizer;
             _fields = _fieldGenerator.CreateFields();
             _result = _fields[0];
         }
 
         public void Spin()
         {
-            var n = (uint) new Random().Next(0, 37);
+            var n = _randomizer.GetNext(Lowerbound, Higherbound);
             _result = _fields[(int) n];
         }
 
