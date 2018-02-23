@@ -34,7 +34,7 @@ namespace RouletteGame.Unit.Test
         [Test]
         public void Roulette_CanPayUp_ResultIsPlayerWon()
         {
-            Assert.That(
+            Assert.That(i
         }
 
     }
