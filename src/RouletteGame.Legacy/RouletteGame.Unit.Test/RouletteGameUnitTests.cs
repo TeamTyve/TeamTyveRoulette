@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NSubstitute;
 using NUnit.Framework;
 using RouletteGame.Legacy;
 
@@ -14,6 +15,13 @@ namespace RouletteGame.Unit.Test
         private Legacy.RouletteGame uut;
         private IBet bet;
         private IRoulette roulette;
+
+
+        [SetUp]
+        public void Init()
+        {
+
+        }
 
         [Test]
         public void Roulette_CanCloseBets_ResultIsException()
@@ -34,8 +42,21 @@ namespace RouletteGame.Unit.Test
         [Test]
         public void Roulette_CanPayUp_ResultIsPlayerWon()
         {
-            Assert.That(i
+           
         }
+
+        [Test]
+        public void Roulette_CanPlaceBet_ResultIsSomething()
+        {
+
+        }
+
+        [Test]
+        public void Roulette_CanSpinRoulette_ResultIsSpin()
+        {
+
+        }
+
 
     }
 }
