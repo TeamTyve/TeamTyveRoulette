@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using NSubstitute;
 using NUnit.Framework;
 using RouletteGame.Legacy;
+using RouletteGame = RouletteGame.Legacy.RouletteGame;
 
 namespace RouletteGame.Unit.Test
 {
@@ -20,6 +21,8 @@ namespace RouletteGame.Unit.Test
         [SetUp]
         public void Init()
         {
+            bet = Substitute.For<IBet>();
+            roulette = Substitute.For<IRoulette>();
 
         }
 
