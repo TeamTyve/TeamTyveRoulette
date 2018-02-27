@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using NSubstitute;
 using NUnit.Framework;
 using RouletteGame.Legacy;
-using RouletteGame = RouletteGame.Legacy.RouletteGame;
+
 
 namespace RouletteGame.Unit.Test
 {
@@ -24,6 +24,7 @@ namespace RouletteGame.Unit.Test
             bet = Substitute.For<IBet>();
             roulette = Substitute.For<IRoulette>();
 
+            uut = new Legacy.RouletteGame(roulette);
         }
 
         [Test]
@@ -42,22 +43,26 @@ namespace RouletteGame.Unit.Test
             Assert.DoesNotThrow(() => uut.PlaceBet(new ColorBet("Player 1", 100, Field.Black)));
         }
 
-        [Test]
+       /* [Test]
         public void Roulette_CanPayUp_ResultIsPlayerWon()
         {
-           
-        }
+            uut.OpenBets();
+            uut.PlaceBet(bet);
+            uut.CloseBets();
+            uut.SpinRoulette();
+            uut.PayUp();
 
-        [Test]
-        public void Roulette_CanPlaceBet_ResultIsSomething()
-        {
-
-        }
+           // bet.Received().WonAmount();
+        }*/
 
         [Test]
         public void Roulette_CanSpinRoulette_ResultIsSpin()
         {
+            uut.OpenBets();
+            uut.CloseBets();
+            uut.SpinRoulette();
 
+            roulette.Received().Spin();
         }
 
 
