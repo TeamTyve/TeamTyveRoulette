@@ -1,10 +1,12 @@
-﻿namespace RouletteGame.Legacy
+﻿using RouletteGame.Library;
+
+namespace RouletteGame.Legacy.Console
 {
     internal class RouletteGameTestApplication
     {
         private static void Main()
         {
-            var game = new RouletteGame(new Roulette(new FieldGenerator(), new Randomizer()));
+            var game = new Library.RouletteGame(new Roulette(new FieldGenerator(), new Randomizer()));
             game.OpenBets();
             game.PlaceBet(new ColorBet("Player 1", 100, Field.Black));
             game.PlaceBet(new ColorBet("Player 1", 100, Field.Red));

@@ -1,6 +1,6 @@
 ﻿using NSubstitute;
 using NUnit.Framework;
-using RouletteGame.Legacy;
+using RouletteGame.Library;
 
 
 namespace RouletteGame.Unit.Test
@@ -8,7 +8,7 @@ namespace RouletteGame.Unit.Test
     [TestFixture]
     class RouletteGameUnitTests
     {
-        private Legacy.RouletteGame uut;
+        private Library.RouletteGame uut;
         private IRoulette roulette;
 
 
@@ -17,7 +17,7 @@ namespace RouletteGame.Unit.Test
         {
             roulette = Substitute.For<IRoulette>();
 
-            uut = new Legacy.RouletteGame(roulette);
+            uut = new Library.RouletteGame(roulette);
         }
 
         [Test]

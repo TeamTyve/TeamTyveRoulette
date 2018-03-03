@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace RouletteGame.Legacy
+namespace RouletteGame.Library
 {
     public class RouletteGame
     {

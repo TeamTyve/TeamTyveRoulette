@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using NSubstitute;
 using NUnit.Framework;
-using RouletteGame.Legacy;
+using RouletteGame.Library;
 
 namespace RouletteGame.Unit.Test
 {

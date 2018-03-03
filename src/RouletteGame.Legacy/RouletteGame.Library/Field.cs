@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace RouletteGame.Legacy
+namespace RouletteGame.Library
 {
     public class Field
     {

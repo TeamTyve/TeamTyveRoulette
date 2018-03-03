@@ -1,5 +1,5 @@
 ﻿using NUnit.Framework;
-using Randomizer = RouletteGame.Legacy.Randomizer;
+using RouletteGame.Library;
 
 namespace RouletteGame.Unit.Test
 {

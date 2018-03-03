@@ -1,4 +1,4 @@
-﻿namespace RouletteGame.Legacy
+﻿namespace RouletteGame.Library
 {
     public interface IBet
     {

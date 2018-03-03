@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace RouletteGame.Legacy
+namespace RouletteGame.Library
 {
     public interface IFieldGenerator
     {
