@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using NUnit.Framework;
 using RouletteGame.Legacy;
 using NSubstitute;
-using NSubstitute.Core;
 
 namespace RouletteGame.Unit.Test
 {

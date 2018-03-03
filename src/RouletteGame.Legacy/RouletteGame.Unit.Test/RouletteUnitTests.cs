@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using NSubstitute;
 using NUnit.Framework;
 using RouletteGame.Legacy;
@@ -42,7 +38,7 @@ namespace RouletteGame.Unit.Test
         public void Roulettte_SetLowerBounds_ReturnsValues(uint a, uint e)
         {
             uut.Lowerbound = a;
-            Assert.That(uut.Lowerbound, Is.EqualTo((uint)e));
+            Assert.That(uut.Lowerbound, Is.EqualTo(e));
         }
 
         [TestCase((uint)0, (uint)0)]

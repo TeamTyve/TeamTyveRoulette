@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NSubstitute;
+﻿using NSubstitute;
 using NUnit.Framework;
 using RouletteGame.Legacy;
 
@@ -14,14 +9,12 @@ namespace RouletteGame.Unit.Test
     class RouletteGameUnitTests
     {
         private Legacy.RouletteGame uut;
-        private IBet bet;
         private IRoulette roulette;
 
 
         [SetUp]
         public void Init()
         {
-            bet = Substitute.For<IBet>();
             roulette = Substitute.For<IRoulette>();
 
             uut = new Legacy.RouletteGame(roulette);
